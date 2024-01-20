@@ -20,8 +20,6 @@ export default function App () {
     setTl(timeline);
   }, []);
 
-  console.log('tl', tl);
-
   return (
       <div className="app" ref={el}>
         <div className={'box'}>Box</div>
