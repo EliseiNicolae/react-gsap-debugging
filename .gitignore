@@ -10,6 +10,7 @@ yarn-error.log*
 
 # IDEs
 .idea/
+lib
 .vscode/
 *.swp
 *.swo
