@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-export function GSControlPanel ({ timeline }) {
+export function GsapControlPanel ({ timeline }) {
   console.log('timeline', timeline)
   const range = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -65,8 +65,8 @@ export function GSControlPanel ({ timeline }) {
   };
 
   return (
-      <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, margin: 'auto', maxWidth: '600px', background: 'black' }}>
-        <div style={{ display: 'flex' }}>
+      <div className="control-panel">
+        <div className="control-panel-flex">
           <input
               ref={range}
               type="range"
@@ -75,18 +75,20 @@ export function GSControlPanel ({ timeline }) {
               step="0.000001"
               value={timelinePosition / 100}
               onChange={handleProgressChange}
-              style={{ width: '100%' }}
+              className="range-input"
           />
-          <p style={{ width: 90, paddingLeft: 10 }}>{Number(timelinePosition).toFixed(2)}%</p>
+          <p className="timeline-position">{Number(timelinePosition).toFixed(2)}%</p>
         </div>
-        <button onClick={playTimeline} disabled={isPlaying}>
-          Start
-        </button>
-        <button onClick={pauseTimeline} disabled={!isPlaying}>
-          Stop
-        </button>
-        <button onClick={resetTimeline}>Reset</button>
-        {`   `}Status: {isPlaying ? 'Playing' : 'Paused'}
+        <div className={"controls"}>
+          <button onClick={playTimeline} disabled={isPlaying}>
+            Start
+          </button>
+          <button onClick={pauseTimeline} disabled={!isPlaying}>
+            Stop
+          </button>
+          <button onClick={resetTimeline}>Reset</button>
+          {`   `}Status: {isPlaying ? 'Playing' : 'Paused'}
+        </div>
       </div>
   );
 }

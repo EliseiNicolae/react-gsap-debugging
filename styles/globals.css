@@ -32,3 +32,47 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+
+
+/********  GsapControlPanel   ********/
+.control-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 600px;
+    background: black;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.control-panel-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.range-input {
+    width: 100%;
+}
+
+.timeline-position {
+    width: 90px;
+    padding-left: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+button {
+    background: greenyellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 15px;
+}
