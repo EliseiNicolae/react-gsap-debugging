@@ -34,7 +34,7 @@ body {
 }
 
 
-/********  GsapControlPanel   ********/
+/********  GsapDebugging   ********/
 .control-panel {
     position: fixed;
     bottom: 0;
@@ -45,6 +45,7 @@ body {
     background: black;
     border-radius: 20px;
     padding: 5px 20px;
+    z-index: 999;
 }
 
 .control-panel-flex {
@@ -75,4 +76,9 @@ button {
     border-radius: 10px;
     border: 2px solid black;
     font-size: 15px;
+    cursor: pointer;
+}
+
+button:disabled,  button:disabled:hover {
+    cursor: not-allowed;
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { GsapControlPanel } from "../src/GsapControlPanel";
+import { GsapDebugging } from "../src/components/GsapDebugging";
 
 export default function App () {
   const el = useRef();
@@ -24,7 +24,7 @@ export default function App () {
       <div className="app" ref={el}>
         <div className={'box'}>Box</div>
         <div className={'circle'}>Circle</div>
-        <GsapControlPanel timeline={tl} />
+        <GsapDebugging timeline={tl} />
       </div>
   );
 }

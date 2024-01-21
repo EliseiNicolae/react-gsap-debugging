@@ -1,6 +1,6 @@
 {
   "name": "react-gsap-debugging",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A control panel for GSAP timeline animations",
   "main": "dist/GsapControlPanel.js",
   "scripts": {
@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/EliseiNicolae/react-gsap-debugging#readme",
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "latest",
+    "react-dom": "latest",
     "gsap": "latest",
-    "next": "^14.1.0"
+    "next": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",

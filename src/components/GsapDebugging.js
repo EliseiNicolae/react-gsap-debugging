@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-export function GsapControlPanel ({ timeline }) {
+export function GsapDebugging ({ timeline }) {
   const range = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [timelinePosition, setTimelinePosition] = useState(0);
