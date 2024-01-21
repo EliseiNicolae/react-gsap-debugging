@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { GsapControlPanel } from "../components/GsapControlPanel";
+import { GsapControlPanel } from "../src/GsapControlPanel";
 
 export default function App () {
   const el = useRef();
