@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { GsapDebugging } from "../src/components/GsapDebugging";
+import { GsapDebugging } from "../src/gsap-debugging";
 
 export default function App () {
   const el = useRef();

@@ -20,7 +20,7 @@ Basic Example
 ```jsx
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { GsapDebugging } from "react-gsap-debugging";
+import { GsapDebugging } from "react-gsap-debugging/dist/gsap-debugging";
 
 export default function App () {
   const el = useRef();

@@ -1,0 +1,53 @@
+/********  GsapDebugging   ********/
+.control_panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 600px;
+    background: black;
+    border-radius: 20px;
+    padding: 5px 20px;
+    z-index: 999;
+}
+
+.control_panel_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.range_input {
+    width: 100%;
+}
+
+.timeline_position {
+    width: 90px;
+    padding-left: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn {
+    background: greenyellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:disabled, .btn:disabled:hover {
+    cursor: not-allowed;
+}
+
+.status {
+    width: 110px;
+    text-align: center;
+}

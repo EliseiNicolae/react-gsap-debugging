@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import styles from "./style.module.css";
 
 export function GsapDebugging ({ timeline }) {
   const range = useRef(null);
@@ -64,8 +65,8 @@ export function GsapDebugging ({ timeline }) {
   };
 
   return (
-      <div className="control-panel">
-        <div className="control-panel-flex">
+      <div className={styles.control_panel}>
+        <div className={styles.control_panel_flex}>
           <input
               ref={range}
               type="range"
@@ -74,19 +75,22 @@ export function GsapDebugging ({ timeline }) {
               step="0.000001"
               value={timelinePosition / 100}
               onChange={handleProgressChange}
-              className="range-input"
+              className={styles.range_input}
           />
-          <p className="timeline-position">{Number(timelinePosition).toFixed(2)}%</p>
+          <p className={styles.timeline_position}>{Number(timelinePosition).toFixed(2)}%</p>
         </div>
-        <div className={"controls"}>
-          <button onClick={playTimeline} disabled={isPlaying}>
+        <div className={styles.controls}>
+          <button className={styles.btn} onClick={playTimeline} disabled={isPlaying}>
             Start
           </button>
-          <button onClick={pauseTimeline} disabled={!isPlaying}>
+          <button className={styles.btn} onClick={pauseTimeline} disabled={!isPlaying}>
             Stop
           </button>
-          <button onClick={resetTimeline}>Reset</button>
-          {`   `}Status: {isPlaying ? 'Playing' : 'Paused'}
+          <button className={styles.btn} onClick={resetTimeline}>Reset</button>
+          {`   `}
+          <div className={styles.status}>
+            Status: {isPlaying ? 'Playing' : 'Paused'}
+          </div>
         </div>
       </div>
   );
